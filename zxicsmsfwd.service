@@ -1,0 +1,14 @@
+[Unit]
+Description=ZXIC based LTE dongle SMS forwarder
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env python3 zxicsmsfwd
+WorkingDirectory=/home/kela/zxicsmsfwd
+Restart=always
+RuntimeMaxSec=infinity
+SyslogIdentifier=zxicsmsfwd
+
+[Install]
+WantedBy=default.target
+

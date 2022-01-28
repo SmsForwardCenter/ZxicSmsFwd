@@ -1,0 +1,22 @@
+{
+    "telegram_host": "api.telegram.org",
+    "bot_token": "1234567890:VGhpcyBib3QgdG9rZW4gaXMgaW52YWxpZC4",
+    "telegram_chat_id": "1145141919",
+    "trust_command_from": [
+        1145141919
+    ],
+    "modems": [
+        {
+            "type": "zxic_web_new",
+            "name": "13800138000",
+            "modem_ip": "172.17.0.1",
+            "login_password": "admin"
+        },
+        {
+            "type": "zxic_web_old",
+            "name": "15666666666",
+            "modem_ip": "172.17.0.5",
+            "login_password": "admin"
+        }
+    ]
+}
