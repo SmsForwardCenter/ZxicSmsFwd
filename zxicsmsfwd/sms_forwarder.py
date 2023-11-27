@@ -110,10 +110,8 @@ class SmsForwarder:
         while self.LOOP_ENABLED:
             try:
                 commands = self.get_telegram_commands()
-            except RuntimeError as e:
-                raise e
             except:
-                time.sleep(1)
+                time.sleep(5)
                 continue
             for i in commands['result']:
                 if i['update_id'] > self.UPDATE_ID:
@@ -162,7 +160,7 @@ class SmsForwarder:
                                 content += ' ' + i
                         #self.send_telegram_message(chat_id, f'{device_name}, {target_phone}, {content}')
                         self.do_send_sms_task(chat_id, device_name, target_phone, content)
-            time.sleep(1)
+            time.sleep(2)
 
     def do_send_sms_task(self, chat_id, device_name, target_phone, content):
         has_this_modem = False
